@@ -1,0 +1,83 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 8px;
+  border-radius: var(--r-pill);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  line-height: 1.6;
+  white-space: nowrap;
+  border: 1px solid transparent;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  flex: none;
+}
+
+.neutral {
+  color: var(--c-text-muted);
+  background: var(--c-surface-2);
+  border-color: var(--c-border);
+}
+
+/* Status */
+.new {
+  color: var(--c-status-new);
+  background: var(--c-accent-soft);
+}
+.progress {
+  color: var(--c-status-progress);
+  background: var(--c-warn-soft);
+}
+.done {
+  color: var(--c-status-done);
+  background: var(--c-success-soft);
+}
+
+/* Priority */
+.p1 {
+  color: #fff;
+  background: var(--c-p1);
+}
+.p2 {
+  color: var(--c-warn);
+  background: var(--c-warn-soft);
+  border-color: #f1d5ad;
+}
+.p3 {
+  color: var(--c-text-muted);
+  background: var(--c-surface-2);
+  border-color: var(--c-border);
+}
+
+/* Category */
+.billing {
+  color: var(--c-cat-billing);
+  background: var(--c-accent-soft);
+}
+.claims {
+  color: var(--c-cat-claims);
+  background: #f0ecfe;
+}
+.endorsement {
+  color: var(--c-cat-endorsement);
+  background: #e3f7f4;
+}
+.general {
+  color: var(--c-cat-general);
+  background: var(--c-surface-2);
+  border-color: var(--c-border);
+}
+.urgent {
+  color: #fff;
+  background: var(--c-cat-urgent);
+}
+.spam {
+  color: var(--c-text-inverse);
+  background: var(--c-cat-spam);
+}

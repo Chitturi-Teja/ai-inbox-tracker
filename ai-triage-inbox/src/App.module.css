@@ -1,0 +1,110 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Topbar */
+.topbar {
+  height: var(--topbar-h);
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  padding: 0 var(--sp-5);
+  background: var(--c-surface);
+  border-bottom: 1px solid var(--c-border);
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+.logo {
+  font-size: var(--fs-xl);
+}
+.brandName {
+  font-size: var(--fs-lg);
+  font-weight: 700;
+}
+.topActions {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+}
+.kbdHint {
+  font-size: var(--fs-xs);
+  color: var(--c-text-subtle);
+}
+.kbdHint kbd {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  background: var(--c-surface-2);
+  border: 1px solid var(--c-border);
+  border-radius: 4px;
+  padding: 1px 4px;
+  color: var(--c-text-muted);
+}
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--c-text-muted);
+  cursor: pointer;
+  user-select: none;
+}
+.toggle input {
+  accent-color: var(--c-accent);
+  cursor: pointer;
+}
+.toggleDisabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Workspace split */
+.workspace {
+  flex: 1;
+  display: grid;
+  grid-template-columns: var(--list-w) 1fr;
+  min-height: 0;
+}
+.listPane {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  background: var(--c-surface);
+  border-right: 1px solid var(--c-border);
+}
+.detailPane {
+  min-height: 0;
+  overflow: hidden;
+}
+.placeholder {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive: single column with detail as an overlay on small screens. */
+@media (max-width: 860px) {
+  .kbdHint {
+    display: none;
+  }
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+  .detailPane {
+    display: none;
+  }
+  .hasActive .listPane {
+    display: none;
+  }
+  .hasActive .detailPane {
+    display: block;
+  }
+}
