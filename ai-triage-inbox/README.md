@@ -246,4 +246,4 @@ Frontend-only static SPA — zero config:
 
 ## Time spent
 
-**Total: ~15 hours.** See [`TIMELOG.md`](TIMELOG.md) for the breakdown.
+**Total: ~4.5 hours.** See [`TIMELOG.md`](TIMELOG.md) for the breakdown.
