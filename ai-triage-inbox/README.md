@@ -232,18 +232,6 @@ src/
 
 ---
 
-## Deploy (Vercel)
-
-Frontend-only static SPA — zero config:
-
-1. Push this repo to GitHub.
-2. Import it in Vercel (framework preset: **Vite**; build `pnpm build`, output
-   `dist`). `vercel.json` already adds the SPA rewrite.
-3. (Optional) add `VITE_ANTHROPIC_API_KEY` as a Vercel env var to enable Real AI
-   on the deployed demo. Not required — Mock mode works everywhere.
-
----
-
 ## Time spent
 
 **Total: ~4.5 hours.** See [`TIMELOG.md`](TIMELOG.md) for the breakdown.
